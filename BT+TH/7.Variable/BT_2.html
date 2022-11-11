@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline-block;
+            margin: 10px;
+        }
+
+        p{
+            text-align: center;
+            font-weight: 900;
+        }
+        
+        html, body{
+            height: 100%;
+            text-align: center;
+        }
+        /* body {
+            text-align: center;
+        } */
+    </style>
+</head>
+<body>
+    <br><br><br><br><br>
+    <div>
+        <p>Amount</p>
+        <input type="text" id="sonhapvao">
+    </div>
+    <div>
+        <p>Amount</p>
+        <select name="" id="vn">
+            <option value="vn1">VietNam</option>
+            <option value="usd1">USD</option>
+        </select>
+    </div>
+    <div>
+        <select name="" id="usd">
+            <option value="vn1">VietNam</option>
+            <option value="usd1">USD</option>
+        </select>
+    </div>
+    <div>
+        <button onclick="doitien()">Convert</button>
+    </div>
+    <div id="ketqua"></div>
+    <script>
+        function doitien(){
+            let tien = document.getElementById("sonhapvao").value;
+            let tienvn = document.getElementById("vn").value;
+            let tienusd = document.getElementById("usd").value;
+            if (tienvn = tienusd ) {
+                document.getElementById("ketqua").innerHTML = tien;
+                arlet('hello')
+            }
+            
+        //     if (tienvn == "vn1" && tienusd == "usd1") {
+
+        //     }
+        // }
+    </script>
+</body>
+</html>
