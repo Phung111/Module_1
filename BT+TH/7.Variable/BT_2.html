@@ -20,6 +20,15 @@
             height: 100%;
             text-align: center;
         }
+        #ketqua {
+            width: 550px;
+            height: 20px;
+            border: 1px;
+            border-style: solid;
+        }
+        select{
+            width: 150px;
+        }
         /* body {
             text-align: center;
         } */
@@ -32,36 +41,43 @@
         <input type="text" id="sonhapvao">
     </div>
     <div>
-        <p>Amount</p>
-        <select name="" id="vn">
-            <option value="vn1">VietNam</option>
-            <option value="usd1">USD</option>
+        <p>From Curentcy</p>
+        <select name="tien1">
+            <option>VietNam</option>
+            <option>USD</option>
         </select>
     </div>
     <div>
-        <select name="" id="usd">
-            <option value="vn1">VietNam</option>
-            <option value="usd1">USD</option>
+        <p>To Curentcy</p>
+        <select name="tien2" > <!--thử lại với id-->
+            <option>VietNam</option>
+            <option>USD</option>
         </select>
     </div>
     <div>
         <button onclick="doitien()">Convert</button>
     </div>
-    <div id="ketqua"></div>
+    <br>
+    <div id="ketqua">Kết quả</div>
     <script>
-        function doitien(){
-            let tien = document.getElementById("sonhapvao").value;
-            let tienvn = document.getElementById("vn").value;
-            let tienusd = document.getElementById("usd").value;
-            if (tienvn = tienusd ) {
-                document.getElementById("ketqua").innerHTML = tien;
-                arlet('hello')
-            }
-            
-        //     if (tienvn == "vn1" && tienusd == "usd1") {
+        function doitien() {
+            var tien = document.getElementById("sonhapvao").value;
+            var tienso1 = document.getElementsByName("tien1");
+            var tienso2 = document.getElementsByName("tien2");
+            var doitienviet = tien/20000;
+            var doitienusd = tien*20000;
+                if (tienso1 = 'VietNam' , tienso2 == 'USD') {
+                    if (tienso1 = 'USD' , tienso2 == 'VietNam') {
+                        document.getElementById("ketqua").innerHTML = doitienusd
+                    } else {document.getElementById("ketqua").innerHTML = doitienviet}
+                } else {document.getElementById("ketqua").innerHTML = tien;}
+        }
 
-        //     }
-        // }
+        // if (tiendoi1 == 'VietNam' && tiendoi2 == 'USD' ) {document.getElementById("ketqua").innerHTML = doitienviet}
+        //         else {
+        //             if (tiendoi1 == 'USD' && tiendoi2 == 'VietNam') {document.getElementById("ketqua").innerHTML = doitienusd}
+        //             else {document.getElementById("ketqua").innerHTML = tien;}
+        //         }
     </script>
 </body>
 </html>
