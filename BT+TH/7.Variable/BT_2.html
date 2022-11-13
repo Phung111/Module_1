@@ -35,49 +35,57 @@
     </style>
 </head>
 <body>
-    <br><br><br><br><br>
-    <div>
-        <p>Amount</p>
-        <input type="text" id="sonhapvao">
-    </div>
-    <div>
-        <p>From Curentcy</p>
-        <select name="tien1">
-            <option>VietNam</option>
-            <option>USD</option>
-        </select>
-    </div>
-    <div>
-        <p>To Curentcy</p>
-        <select name="tien2" > <!--thử lại với id-->
-            <option>VietNam</option>
-            <option>USD</option>
-        </select>
-    </div>
-    <div>
-        <button onclick="doitien()">Convert</button>
-    </div>
+    <table>
+        <tr>
+            <th><label for="Amount">Amount</label></th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="text" id="Amount"></td>
+            <td>
+                <select id="From">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="To">
+                    <option value="VND">VND</option>
+                    <option  value="USD">USD</option>
+                </select>
+            </td>
+            <td><button onclick="ChangeMoney()">Convert</button></td>
+        </tr>            
+    </table>
     <br>
-    <div id="ketqua">Kết quả</div>
+    <p id="Result"></p>
+    
     <script>
-        function doitien() {
-            var tien = document.getElementById("sonhapvao").value;
-            var tienso1 = document.getElementsByName("tien1");
-            var tienso2 = document.getElementsByName("tien2");
-            var doitienviet = tien/20000;
-            var doitienusd = tien*20000;
-                if (tienso1 = 'VietNam' , tienso2 == 'USD') {
-                    if (tienso1 = 'USD' , tienso2 == 'VietNam') {
-                        document.getElementById("ketqua").innerHTML = doitienusd
-                    } else {document.getElementById("ketqua").innerHTML = doitienviet}
-                } else {document.getElementById("ketqua").innerHTML = tien;}
-        }
+        function ChangeMoney() {
+    let Amount = document.getElementById("Amount").value;
+    let FromC = document.getElementById("From").value;
+    let To = document.getElementById("To").value;
+    let Result;
 
-        // if (tiendoi1 == 'VietNam' && tiendoi2 == 'USD' ) {document.getElementById("ketqua").innerHTML = doitienviet}
-        //         else {
-        //             if (tiendoi1 == 'USD' && tiendoi2 == 'VietNam') {document.getElementById("ketqua").innerHTML = doitienusd}
-        //             else {document.getElementById("ketqua").innerHTML = tien;}
-        //         }
+
+    if (FromC == "USD" && To == "VND") {
+        Result = "Result: " + (Amount * 23000) + " Đ";
+    }
+    else if (FromC == "VND"&& To =="USD"){
+        Result = "Result: "+ (Amount / 23000) + " $";
+    }
+    else if (FromC == "VND") {
+        Result = "Result: " + Amount + " Đ"
+    } else {
+        Result = "Result: " + Amount + " $"
+    }
+        
+    document.getElementById("Result").innerHTML = Result;
+}
+
+        
     </script>
 </body>
 </html>
