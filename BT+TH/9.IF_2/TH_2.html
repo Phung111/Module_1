@@ -26,8 +26,10 @@
             element.style.left = parseInt(element.style.left) + 5 + 'px';
 
         }
+        
+        // Ấn phím qua về lên xuống
         function moveSelection(evt) {
-            switch (evt.keyCode) {
+            switch (evt.keyCode) { //keyCode là mã qua về lên xuống
                 case 37:
                     leftArrowPressed();
                     break;
@@ -43,7 +45,7 @@
             }
         }
         function docReady() {
-        window.addEventListener('keydown', moveSelection);
+        window.addEventListener('keydown', moveSelection); //Cho phép thực thi nhiều event cùng một lúc
         } 
     </script>
 </body>

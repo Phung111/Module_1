@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <br><br><br><br><br>
+  <div>
+    <label for="good">GOOD</label>
+    <input type="checkbox" id ="idgood" onclick="isgood()">
+    <br>
+    <label for="fast">FAST</label>
+    <input type="checkbox" id="idfast" onclick="isfast()">
+    <br>
+    <label for="cheap">CHEAP</label>
+    <input type="checkbox" id="idcheap" onclick="ischeap()">
+  </div>
+
+  <script>
+  let good = document.getElementById("idgood");
+  let fast = document.getElementById("idfast");
+  let cheap = document.getElementById("idcheap");
+ 
+  function isgood() {
+    if (good.checked) { 
+      if (fast.checked) {
+        if (cheap.checked) {
+            cheap.checked = false
+        }
+      }
+    }
+  }
+
+  function isfast() {
+    if (fast.checked) { 
+      if (cheap.checked) {
+        if (good.checked) {
+            good.checked = false
+        }
+      }
+    }
+  }
+  function ischeap() {
+    if (cheap.checked) { 
+      if (good.checked) {
+        if (fast.checked) {
+            fast.checked = false
+        }
+      }
+    }
+  }
+  
+ 
+  
+
+
+  </script>
+
+</body>
+</html> 

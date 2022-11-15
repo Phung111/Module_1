@@ -40,10 +40,12 @@
     
 </div>
 <script>
-    let view = document.getElementById("view");
+    let view = document.getElementById("view"); // giống với document.getElementById("Result").innerHTML = view;
+    //view = 1 + 2 + 3
     function inputValue(value) {
         view.value += value;
     }
+    // eval() là hàm tính toán các biểu thức có trong view
     function result() {
         let result = eval(view.value);
         view.value = result;
