@@ -66,21 +66,53 @@
     // document.write( "<br>" + "Tổng = " + sum)
 
     // Bài 6
-    let number = +prompt('Enter number');
-    let n = 0;
-    let sum = 0;
-    let count = 0;
-    document.write("Number: " + count + "<br>");
-    document.write("Dãy số chia hết cho 7: " );
-    for ( i = 1; i <= number; i++ ) {
-        if (n % 7 == 0) {
-            document.write(n+ ",");
-            sum += n;
-            count += 1
+    // let number = +prompt('Enter number');
+    // let count = 0;
+    // let sum = 0;
+    // document.write("Number: " + number + "<br>");
+    // document.write(number + " số chia hết cho 7: <br>" );
+    // for ( i = 1;  ; i++ ) {
+    //     if (i % 7 == 0) {
+    //         document.write(i+ "<br>");
+    //         sum += i;
+    //         count += 1
+    //         if(count == number) break;
+    //     }
+    // }
+    // document.write( "<br>" + "Tổng = " + sum)
+
+    // Bài 7
+    // for (i=1; i<100; i++) {
+    //     if (i % 3 == 0) {document.write('Fizz'+ '<br>')
+    //     } else if (i % 5 == 0) {document.write('Buzz'+ '<br>')
+    //     } else if (i % 3 == 0 && i % 5 == 0) {document.write('Fizz'+ '<br>')
+    //     } else {document.write(i+ '<br>')
+    //     }
+    // }
+
+    // Bài 8
+    alert("Yo Let's go");
+    alert("Guess which number in a range");
+    let min = prompt("Enter min number");
+    let max = prompt("Enter max number");
+    let i = parseInt(Math.random() * (max - min + 1) + min)
+    let n = prompt("Enter which number you guess")
+    for (a = 3 ; a > 0 ;a--) {
+        if (n == i) {
+            alert("Your guess is correct")
+        } else {
+            alert("Your guess is not correct");
+            if (a == 1) {
+                alert("You lose");
+                alert("Press F5 to play again");
+                break;
+            }
+            alert("You have "+ (a-1) +" guess left");
+            let n = prompt("Enter which number you guess next")
         }
-        n += 1
+        
     }
-    document.write( "<br>" + "Tổng = " + sum)
+
 
 </script>
 </body>
