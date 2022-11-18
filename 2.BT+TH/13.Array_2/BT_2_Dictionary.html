@@ -15,20 +15,18 @@
            let a2 = ["táo", "chuối", "xoài", "dưa hấu", "trái thơm"] ;
            let word = prompt("Nhập vào từ cần tra từ điển").toString();
            let result = "";
-           let tf = null;
            for ( i = 0 ; i <= word.length ; i++ ) {
                 if ( word == a1[i]) {
                     result += a2[i];
-                    tf = true;
                 } else if (word == a2[i]) {
                     result += a1[i];
-                    tf = true
-                } else {tf = false}
+                }
+                if (i == word.length) {document.write("Từ đã nhập không có trong từ điển")}
                 
             }
-            // if (tf = false) {
+            
             //     document.write("<br>" +"<br>" +"<br>" +"<br>" +"<br>")
-            //     document.write("Từ đã nhập không có trong từ điển")
+            //     
             // }
             document.write("<br>" +"<br>" +"<br>" +"<br>" +"<br>")
             document.write(result)
