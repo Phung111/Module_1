@@ -9,3 +9,5 @@ Git push -u origin
 
 Git reflog
 Git reset --hard 0232a9e
+
+rmdir /s .git //Xoá một file .git trên máy tính
