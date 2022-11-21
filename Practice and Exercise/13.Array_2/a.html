@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<br><br><br><br><br>
+<p>Click the button to replace "blue" with "red" in the paragraph below:</p>
+
+<p id="demo">10.000.000</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction()
+{
+var str=document.getElementById("demo").innerHTML; 
+var n=str.replace(/[.]/g, '');
+document.getElementById("demo").innerHTML=n;
+}
+</script>
+
+</body>
+</html>

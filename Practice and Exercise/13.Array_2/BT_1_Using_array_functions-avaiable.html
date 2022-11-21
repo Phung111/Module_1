@@ -24,18 +24,16 @@
         function bai2() {
            
             let number = prompt("Nhập vào một dãy số liền nhau").toString();
-            let result = [number[0]]; //1 kiểu Khai báo mảng
-            for ( i = 1 ; i < number.length ; i++) {
-                if ((number[i-1] % 2 == 0) && (number[(i)] % 2 == 0)) {
-                    result.push("-", number[i])
-                } else {
-
-
-                    result.push(number[i])
-                }
+            let result = []; 
+            for ( i = 0 ; i < number.length ; i++) {
+                if ((number[i] % 2 == 0) && (number[(i+1)] % 2 == 0)) {
+                    result[i] = number[i] + "-"
+                    // result.push("-", number[i]
+                } else { result[i] = number[i]}
             }
             document.write("<br>" +"<br>" +"<br>" +"<br>" +"<br>")
-            document.write(result.join("")) // join() chuyển tất cả các phần tử trong mảng thành chuỗi rồi nối lại với nhau
+            document.write(result.join("")) 
+            
         }
         
         function bai3() {

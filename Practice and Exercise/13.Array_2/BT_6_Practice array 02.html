@@ -92,6 +92,7 @@
                     // charAt(i) để ấy ký tự thứ i ra
                     // + trả về kiểu dữ liệu số
                     // ! not tức là nếu dữ liệu số trên = false --> lấy phần chữ
+                    // Tổng hợp 3 cái lại nghĩa là: Nếu không phải kiểu dữ liệu số.
                     count++;
                     onlychuoi.push(chuoi.charAt(i));
                     // document.write(chuoi.charAt(i) + "<br>")
@@ -105,7 +106,6 @@
         }
         
         function bai5() {
-            
             let chuoi1 = prompt("Nhập chuỗi 1");
             let chuoi2 = prompt("Nhập chuỗi 2");
             let dodaichuoi = 0;
@@ -129,34 +129,21 @@
         }
 
         function bai6() {
-            let number = +prompt("Nhập số pt ");
+            let number = +prompt("Nhập số phần tử ");
             let array = [];
-            let arraygoc = [];
+            let newarray = [];
             document.write("<br>" +"<br>" +"<br>" +"<br>" +"<br>");
 
-            document.write("[<br>")
-            for (let i = 0; i < number; i++) {
-                array[i] = prompt("Nhập pt thứ " + i)
-                arraygoc.push(array[i])
+            for (let i = 0; i < number ; i++) {
+                array[i] = prompt("Nhập phần tử thứ " + i);
                 for (j = 0; j < array[i].length ; j++) {
-                    if (array[i].charAt(j) == "-") {
-                        //Thay thế - bằng _
-                        // ((array[i].charAt(j)).toString()).replace('-', '_');
+                    if (array[i].charAt(j) == "-") {        
+                        newarray[i] = array[i].replace(/[-]/g, "_"); 
                     }
-                }
-                // if (array[i] == "-") {
-                //     array[i] = "_";
-                    
-                    
-                // }
-                
-                document.write(array[i] + "<br>")
+                }   
             }
-        
-            document.write("  ]<br>")
-
-            document.write("Mảng đã nhập [ " + arraygoc + " ]<br>")
-            document.write("Mảng thay - thành _ [ " + array + " ]<br>")
+            document.write(`Mảng nhập vào [${array}]<br>`)
+            document.write(`Mảng chuyển '-'' thành '_' [${newarray}]`)
         }
 
     </script>
