@@ -2,25 +2,27 @@
 <body>
 <center>
     <!-- Mảng 1 -->
-    <input type="text" id="inputarray1" placeholder="Input size for array dad" >
+    <input type="text" id="inputarray1" placeholder="Input size for array dad" value="30">
     <button onclick="dp1()">Display</button>
     <br><br>
-    <textarea id="itiemdad" cols="30" rows="10"></textarea>
+    <textarea id="itiemdad" cols="50" rows="15" ></textarea>
     <br><br>
     <!-- Mảng 2 -->
-    <input type="text" id="inputarray2" placeholder="Input size for array son">
+    <input type="text" id="inputarray2" placeholder="Input size for array son" value="10">
     <button onclick="dp2()">Take first size</button>
     <button onclick="dp3()">Take random size</button>
     <br><br>
-    <textarea id="itiemson" cols="30" rows="7"></textarea>
+    <textarea id="itiemson" cols="50" rows="10" ></textarea>
 </center>
 <script>
     //Nhập và hiển thị mảng 1
     function dp1() {
         let number1 = Number(document.getElementById("inputarray1").value);
+        let max = 90;
+        let min = 20;
         var array1 = []
         for ( i = 0 ; i < number1 ; i++) {
-            array1[i] = Math.floor(Math.random() * 100)
+            array1[i] = Math.floor(Math.random() * (max-min) + min)
         } 
         document.getElementById("itiemdad").value = array1.join("\n") //\n để xuống dòng
         //Lưu array1 lên localStorage vào biến array
