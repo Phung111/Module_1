@@ -13,7 +13,7 @@ class Apple {
     }
 
     isEmpty(){
-        if(this.weight)
+        if(this.weight);
     }
 
     getWeight(){
