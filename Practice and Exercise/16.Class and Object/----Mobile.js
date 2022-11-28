@@ -3,44 +3,37 @@
 //Tham khảo screenshot (104)
 
 //Tạo lớp mobile
-function Mobile(pin, draft, inbox, sent, ) {
+class Mobile {
 //Vùng nhớ
-    //Pin
-    this.pin = pin;
-    this.getPin = function(){
-        return this.pin = pin
+    constructor(id, name, pin, draft, inbox, sent, ) {
+        this.id = id;
+        this.name = name;
+        this.pin = pin;
+        this.message = "";
     }
-    //Tin nhắn đang soạn
-    this.draft = draft;
-    this.getDraft = function(){
-        return this.draft = draft
-    }
-    //Tin nhắn đến
-    this.inbox = inbox;
-    this.getInbox = function(){
-        return this.inbox = inbox
-    }
-    //Tin nhắn đã gửi
-    this.sent = sent;
-    this.getSent = function(){
-        return this.sent = sent
-    }
+    
+
 //Chức năng
     //Kiểm tra trạng thái bật tắt
-    this.checkOnOff = checkOnOff;
-    this.getCheckOnOff = function(){
-        return this.checkOnOff = checkOnOff
+    getPin(){
+        return this.pin = pin;
     }
     //Bật tắt dt
 
     //Xạc pin dt
 
     //Soạn tn
-
+    setMessage(message){
+        return this.message = message;
+    }
     //Nhận tn từ mobile khác
-
+    getMessage(){
+        return this.message;
+    }
     //Gửi tn đến mobile khác
-
+    sendMessage(message, mobile){
+        mobile.sendMessage(message)
+    }
     //Xem tn trong hộp thư đến
 
     //Xem tn đã gửi
