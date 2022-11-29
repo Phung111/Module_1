@@ -9,15 +9,16 @@ class Apple {
     }
 
     decrease(){
+        console.log(`Apple decrease 1`);
         return this.weight--;
     }
 
     isEmpty(){
-        if(this.weight);
+        console.log(`Apple is empty`);
     }
 
     getWeight(){
-
+        return this.weight;
     }
 }
 
@@ -55,3 +56,6 @@ eva.speak()
 
 adam.eatApple(apple.weight);
 adam.checkAppleWeight(apple.weight);
+apple.decrease();
+apple.getWeight()
+console.log(`Current apple weight: ${apple.weight}`);
