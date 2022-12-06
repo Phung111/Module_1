@@ -1,4 +1,15 @@
-/**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ninja Game</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body onkeydown="gameBoard.moveNinja(event)">
+    <canvas id="gameCanvas" width="500px" height="500px"></canvas>
+
+    <script>
+        /**
  * Created by nhatnk on 6/27/17.
  */
 const GAMEBOARD_WIDTH = 500;
@@ -114,3 +125,9 @@ function GameBoard() {
 
 var gameBoard = new GameBoard();
 gameBoard.start();
+
+
+
+    </script>
+</body>
+</html>
